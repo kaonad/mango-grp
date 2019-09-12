@@ -1,0 +1,124 @@
+#ourHistory,
+#companies,
+#investments,
+#contactUs {
+  background: #e7e6de;
+}
+#ourHistory li a:active,
+#companies li a:active,
+#investments li a:active,
+#contactUs li a:active {
+  color: red;
+}
+
+.history-container {
+  width: 80%;
+  padding: 100px 0;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  p {
+    text-align: left;
+  }
+  h1 {
+    text-align: center;
+    font-weight: 300;
+    color: #777;
+  }
+
+  h1 span {
+    font-weight: 600;
+  }
+}
+
+.history-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
+  background: #ccd1d9;
+  z-index: 1;
+}
+
+.timeline-block {
+  width: -webkit-calc(50% + 8px);
+  width: -moz-calc(50% + 8px);
+  width: calc(50% + 8px);
+  display: flex;
+  justify-content: space-between;
+  clear: both;
+}
+
+.timeline-block-right {
+  float: right;
+}
+
+.timeline-block-left {
+  float: left;
+  direction: rtl;
+  @media (min-width: 769px) {
+    .timeline-content {
+      text-align: right;
+    }
+  }
+}
+
+.marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #f5f7fa;
+  background: $mainBlue;
+  margin-top: 10px;
+  z-index: 9;
+}
+
+.timeline-content {
+  width: 95%;
+  padding: 0 15px;
+  direction: ltr;
+}
+
+.timeline-content h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.timeline-content span {
+  font-size: 15px;
+  color: #a4a4a4;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  line-height: 1.5em;
+  word-spacing: 1px;
+}
+
+@media screen and (max-width: 767px) {
+  .history-container:before {
+    left: 8px;
+    width: 2px;
+  }
+  .timeline-block {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .timeline-block-right {
+    float: none;
+  }
+  .timeline-block-left {
+    float: none;
+    direction: ltr;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
