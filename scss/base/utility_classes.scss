@@ -1,7 +1,7 @@
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 2rem;
   position: relative;
 }
 
@@ -22,6 +22,12 @@
 
 .min-list li {
   list-style: none;
+}
+.m-bottom-small {
+  margin-bottom: 1rem;
+}
+.m-bottom-large {
+  margin-bottom: 1.6rem;
 }
 
 .p-top-small {

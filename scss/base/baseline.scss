@@ -22,7 +22,9 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-
+section {
+  padding: 3rem 0;
+}
 img {
   max-width: 100%;
   height: auto;
@@ -30,12 +32,15 @@ img {
 
 a {
   color: $mainBlue;
+  opacity: 0.75;
 }
 
 a:hover {
   text-decoration: none;
 }
-
+p {
+  font-size: 18px;
+}
 p,
 ul,
 ol {
@@ -45,4 +50,9 @@ ol {
 p,
 li {
   line-height: 1.65;
+}
+h1,
+h2,
+h3 {
+  margin: 0.5em 0 1.5em 0;
 }

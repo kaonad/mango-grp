@@ -1,0 +1,25 @@
+.trading {
+  background: #f9f9f9;
+  color: $mainBlue;
+  &__grid {
+    column-count: auto;
+    column-gap: auto;
+    padding &__img {
+      text-align: center;
+    }
+  }
+}
+@mixin atMedium {
+  .trading {
+    background: #f9f9f9;
+    color: $mainBlue;
+    &__grid {
+      column-count: 2;
+      column-gap: 2rem;
+      padding &__img {
+        text-align: center;
+        max-height: 500px;
+      }
+    }
+  }
+}

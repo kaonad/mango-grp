@@ -1,7 +1,7 @@
 /*Navigation variables */
 $content-width: 1200px;
 $breakpoint: 799px;
-$nav-height: 70px;
+$nav-height: 80px;
 $nav-background: $mainBlue;
 $nav-font-color: $beige;
 $link-hover-color: #2581dc;
@@ -10,13 +10,14 @@ $link-hover-color: #2581dc;
 .navigation {
   height: $nav-height;
   background: $nav-background;
+  position: relative;
   z-index: 100;
 }
 
 /* Logo and branding*/
 .navigation_brand {
   position: absolute;
-  padding-left: 20px;
+  padding: 0;
   float: left;
   line-height: $nav-height;
   text-transform: uppercase;
@@ -32,13 +33,14 @@ $link-hover-color: #2581dc;
 .navigation_container {
   max-width: $content-width;
   margin: 0 auto;
+  position: relative;
 }
 
 /* Navigation*/
 nav {
   float: right;
   position: relative;
-  z-index: 100;
+
   ul {
     list-style: none;
     margin: 0;
@@ -136,7 +138,7 @@ nav {
   span:after {
     cursor: pointer;
     border-radius: 1px;
-    height: 5px;
+    height: 4px;
     width: 35px;
     background: $nav-font-color;
     position: absolute;

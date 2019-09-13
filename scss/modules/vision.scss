@@ -1,0 +1,11 @@
+.vision {
+  height: 700px;
+  color: $beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 30px;
+  }
+}

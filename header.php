@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head();  ?>
 </head>
 
@@ -10,7 +10,7 @@
     <header>
 
 
-        <section class="navigation">
+        <div class="navigation ">
             <div class="navigation_container">
                 <div class="navigation_brand">
                     <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logos/mango-logo-light.svg" /></a>
@@ -23,5 +23,5 @@
                     )) ?>
                 </nav>
             </div>
-        </section>
+        </div>
     </header>

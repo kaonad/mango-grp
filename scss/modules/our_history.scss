@@ -1,22 +1,12 @@
-#ourHistory,
-#companies,
-#investments,
-#contactUs {
-  background: #e7e6de;
+.our-history {
+  background: #f2f2f2;
 }
-#ourHistory li a:active,
-#companies li a:active,
-#investments li a:active,
-#contactUs li a:active {
-  color: red;
-}
-
 .history-container {
-  width: 80%;
-  padding: 100px 0;
-  margin: 50px auto;
+  padding: 2rem;
+  margin: 0 auto;
   position: relative;
   overflow: hidden;
+
   p {
     text-align: left;
   }
@@ -35,35 +25,28 @@
   content: "";
   position: absolute;
   top: 0;
-  left: 50%;
+  left: 39px;
   margin-left: -1px;
   width: 2px;
   height: 100%;
-  background: #ccd1d9;
-  z-index: 1;
+  background: linear-gradient(transparent, #02013b 90%, transparent 100%);
+  z-index: 9;
 }
-
 .timeline-block {
-  width: -webkit-calc(50% + 8px);
-  width: -moz-calc(50% + 8px);
-  width: calc(50% + 8px);
-  display: flex;
-  justify-content: space-between;
-  clear: both;
+  width: 100%;
+  margin-bottom: 30px;
 }
-
 .timeline-block-right {
-  float: right;
+  float: left;
 }
-
 .timeline-block-left {
   float: left;
-  direction: rtl;
-  @media (min-width: 769px) {
-    .timeline-content {
-      text-align: right;
-    }
-  }
+  direction: ltr;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 40px;
 }
 
 .marker {
@@ -74,11 +57,12 @@
   background: $mainBlue;
   margin-top: 10px;
   z-index: 9;
+  float: left;
 }
 
 .timeline-content {
   width: 95%;
-  padding: 0 15px;
+  padding: 0 1.5rem;
   direction: ltr;
 }
 
@@ -94,31 +78,75 @@
   color: #a4a4a4;
 }
 
-.timeline-content p {
-  font-size: 14px;
-  line-height: 1.5em;
-  word-spacing: 1px;
-}
+@mixin atMedium {
+  .our-history {
+    background: $beige;
+  }
+  .history-container {
+    width: 80%;
+    padding: 100px 0;
+    margin: 50px auto;
+    background: linear-gradient(to bottom, #f9f9f9 20%, #fff 40%);
+  }
 
-@media screen and (max-width: 767px) {
   .history-container:before {
-    left: 8px;
-    width: 2px;
+    left: 50%;
+    width: 4px;
   }
+
   .timeline-block {
-    width: 100%;
-    margin-bottom: 30px;
+    width: -webkit-calc(50% + 8px);
+    width: -moz-calc(50% + 8px);
+    width: calc(50% + 8px);
+    display: flex;
+    justify-content: space-between;
+    clear: both;
   }
+
   .timeline-block-right {
-    float: none;
+    float: right;
   }
+
   .timeline-block-left {
-    float: none;
+    float: left;
+    direction: rtl;
+    text-align: right;
+    p {
+      text-align: right;
+    }
+  }
+
+  .marker {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid $mainBlue;
+    background: $beige;
+    margin-top: 10px;
+    z-index: 9;
+  }
+
+  .timeline-content {
+    width: 95%;
+    padding: 0 15px;
     direction: ltr;
   }
 
-  h1 {
-    font-size: 30px;
-    line-height: 40px;
+  .timeline-content h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .timeline-content span {
+    font-size: 15px;
+    color: #a4a4a4;
+  }
+
+  .timeline-content p {
+    font-size: 14px;
+    line-height: 1.5em;
+    word-spacing: 1px;
   }
 }
